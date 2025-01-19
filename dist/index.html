@@ -4,14 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>To Do App</title>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="output.css">
 </head>
 
 <body>
+    <div class="w-full md:w-96 border-4 border-rose-500 p-4 m-10 ">
+        <h1 class="text-3xl">To Do App</h1>
+        <div id="addNew" data-modal-target="form" data-modal-toggle="form"
+            class="flex p-2 px-3 my-4 bg-red-200 rounded-lg justify-between cursor-pointer">
+            <span class="text-xl">Add New Task</span>
+            <img class="w-8 h-8 bg-red-300" src="../src/add.svg" alt="">
+        </div>
+        <h2 class="text-2xl w-full font-bold text-center mb-4">Tasks</h2>
+        <a href="https://www.flaticon.com/free-icons/edit" title="edit icons"></a>
 
-    <h1 class="bg-red-400 w-full">hello</h1>
+
+
+
+        <!-- Main modal -->
+        <form id="form" tabindex="-1" aria-hidden="true"
+            class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            Add New Task
+                        </h3>
+                        <button type="button"
+                            class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                            data-modal-hide="default-modal">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5 space-y-4">
+                        <div class="flex justify-between">
+                            <div>
+                                <p class="mb-1 text-lg">Your Task Name</p>
+                                <input type="text" name="" id=""
+                                    class="form-input px-4 py-3 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            </div>
+                            <div>
+                                <p class="mb-1 text-lg">Due Date</p>
+                                <input type="date" name="" id=""
+                                    class="form-input  px-4 py-3 text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            </div>
+
+
+                        </div>
+
+
+                        <textarea name="" id="" cols="30" rows="10"
+                            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                        <button data-modal-hide="default-modal" type="button"
+                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            Add</button>
+                        <button data-modal-hide="default-modal" type="button"
+                            class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+
+        <div id="tasks" class="border-4 border-grey-500 p-4 mt-2">
+            <div class="flex justify-between">
+                <span class="text-xl">Task1</span>
+                <span>date</span>
+            </div>
+            <p class="py-5 text-xl">Text added for task</p>
+            <div class="options flex justify-evenly ">
+                <img class="cursor-pointer w-7 h-7" src="../src/edit.png" alt="">
+                <img class="cursor-pointer" src="../src/delete.png" alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+
 
 </body>
+
+<script src="/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+
+
 
 </html>
