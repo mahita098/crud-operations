@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+.main-grid::-webkit-scrollbar {
+  width: 0 !important;
+}
